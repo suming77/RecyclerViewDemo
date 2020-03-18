@@ -28,8 +28,23 @@
         <activity
             android:name=".activity.StaggeredGridActivity"
             android:screenOrientation="portrait" />
-  <activity
+        <activity
             android:name=".activity.TypeViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ItemDecorationAnimatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HeadFootViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TouchHelperActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ItemClickActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyLayoutManagerActivity"
             android:screenOrientation="portrait" />
 
     </application>

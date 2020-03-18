@@ -2,6 +2,7 @@ package com.antiphon.recyclerviewdemo.activity;
 
 import android.os.Bundle;
 
+import com.antiphon.recyclerviewdemo.MyItemTouchCallback;
 import com.antiphon.recyclerviewdemo.R;
 import com.antiphon.recyclerviewdemo.adapter.LinearVerticalAdapter;
 
@@ -9,13 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * 线性垂直
+ * 拖拽
  */
-public class LinearVerticalActivity extends AppCompatActivity {
+public class TouchHelperActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +35,14 @@ public class LinearVerticalActivity extends AppCompatActivity {
         //3.设置数据
         List<String> stringList = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
-            stringList.add("第 " + i + " 个item");
+            stringList.add("第 " + i + " 个item：长按拖拽，右滑删除");
         }
 
         //4.数据适配器
         LinearVerticalAdapter adapter = new LinearVerticalAdapter(this, stringList);
         //设置适配器到recyclerView
+        ItemTouchHelper helper = new ItemTouchHelper(new MyItemTouchCallback(adapter));
+        helper.attachToRecyclerView(recyclerView);
         recyclerView.setAdapter(adapter);
     }
 }

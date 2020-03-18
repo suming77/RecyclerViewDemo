@@ -67,4 +67,8 @@ public class LinearVerticalAdapter extends RecyclerView.Adapter {
             });
         }
     }
+
+    public List<String> getData() {
+        return mData;
+    }
 }

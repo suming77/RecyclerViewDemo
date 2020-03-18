@@ -1,90 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_linear_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="linear_vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_linear_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#F44336"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="linear_horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_linear_vertical" />
+        <Button
+            android:id="@+id/btn_linear_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="linear_vertical线性布局(垂直方向)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_grid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#E91E63"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="GridLayoutManager"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_linear_horizontal" />
+        <Button
+            android:id="@+id/btn_linear_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#F44336"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="linear_horizontal线性布局(水平方向)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_linear_vertical" />
 
-    <Button
-        android:id="@+id/btn_staggered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#9C27B0"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="StaggeredGridLayoutManager"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_grid" />
+        <Button
+            android:id="@+id/btn_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E91E63"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="GridLayoutManager(网格布局)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_linear_horizontal" />
 
-    <Button
-        android:id="@+id/btn_type_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#673AB7"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="item_type_view"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_staggered" />
-    <!--   <Button
-     android:id="@+id/btn_"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:background="#3F51B5"
-     android:layout_marginTop="10dp"
-     app:layout_constraintLeft_toLeftOf="parent"
-     app:layout_constraintRight_toRightOf="parent"
-     app:layout_constraintTop_toTopOf="parent" />
-      <Button
-     android:id="@+id/btn_"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:background="#2196F3"
-     android:layout_marginTop="10dp"
-     app:layout_constraintLeft_toLeftOf="parent"
-     app:layout_constraintRight_toRightOf="parent"
-     app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_staggered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#9C27B0"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="StaggeredGridLayoutManager(瀑布流布局)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_grid" />
 
-     -->
+        <Button
+            android:id="@+id/btn_type_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#673AB7"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="item_type_view(多种条目类型)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_staggered" />
 
+        <Button
+            android:id="@+id/btn_itemDecorationAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#3F51B5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="ItemDecorationAnimator(添加删除时的动画效果)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_type_view" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_head_foot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#2196F3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="headfootview(添加头尾布局)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_itemDecorationAnimator" />
+
+        <Button
+            android:id="@+id/btn_touchHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#4CAF50"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="TouchHelper(拖拽、侧滑删除)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_head_foot" />
+
+        <Button
+            android:id="@+id/btn_item_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFEB3B"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="itemclick(自定义item点击事件)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_head_foot" />
+
+        <Button
+            android:id="@+id/btn_my_layoutmanager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFEB3B"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="自定义layoutmanager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_item_click" />
+        <!--  btn_item_click
+          android:background="#FFEB3B"
+          android:background="#FFC107"
+          android:background="#FF9800"
+          android:background="#FF5722"
+          android:background="#F44336"-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
