@@ -12,7 +12,6 @@ import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,7 +48,7 @@ public class ItemDecorationAnimatorActivity extends AppCompatActivity implements
 //            mDecoration.setDrawable(mDrawable);
         }
         mRecyclerView.addItemDecoration(mDecoration);
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+//        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         //设置数据
         List<String> stringList = new ArrayList<>();
@@ -89,4 +88,7 @@ public class ItemDecorationAnimatorActivity extends AppCompatActivity implements
                 break;
         }
     }
+
+
+
 }

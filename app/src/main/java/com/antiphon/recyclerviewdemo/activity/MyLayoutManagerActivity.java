@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- 自定义
+ * 自定义
  */
 public class MyLayoutManagerActivity extends AppCompatActivity {
     @Override
@@ -31,4 +31,5 @@ public class MyLayoutManagerActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new MySelfLayoutManager());
         recyclerView.setAdapter(new LinearVerticalAdapter(this, stringList));
     }
+
 }

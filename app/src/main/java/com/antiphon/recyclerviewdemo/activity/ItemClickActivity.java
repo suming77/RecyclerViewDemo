@@ -21,6 +21,9 @@ import androidx.recyclerview.widget.RecyclerView;
  * 高度自定义点击事件
  */
 public class ItemClickActivity extends AppCompatActivity implements OnItemClickListener, OnItemChildClickListener {
+
+    private ItemClickAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +37,13 @@ public class ItemClickActivity extends AppCompatActivity implements OnItemClickL
         }
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ItemClickAdapter adapter = new ItemClickAdapter(this);
-        recyclerView.setAdapter(adapter);
-        adapter.setDataList(goodsList);
+        mAdapter = new ItemClickAdapter(this);
+        recyclerView.setAdapter(mAdapter);
+        mAdapter.setDataList(goodsList);
 
         //设置item点击事件
-        adapter.setOnItemClickListener(this);
-        adapter.setOnItemChildClickListener(this);
+        mAdapter.setOnItemClickListener(this);
+        mAdapter.setOnItemChildClickListener(this);
     }
 
     @Override
@@ -52,6 +55,7 @@ public class ItemClickActivity extends AppCompatActivity implements OnItemClickL
     public void onItemChildClick(View view, int position) {
         switch (view.getId()) {
             case R.id.iv_head:
+                mAdapter.notifyDataSetChanged();
                 Toast.makeText(this, "item子类点击事件: 头像", Toast.LENGTH_SHORT).show();
                 break;
             default:

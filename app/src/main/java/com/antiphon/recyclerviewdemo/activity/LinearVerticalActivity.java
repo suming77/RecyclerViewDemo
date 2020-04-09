@@ -38,6 +38,8 @@ public class LinearVerticalActivity extends AppCompatActivity {
 
         //4.数据适配器
         LinearVerticalAdapter adapter = new LinearVerticalAdapter(this, stringList);
+
+//        adapter.notifyItemRemoved();
         //设置适配器到recyclerView
         recyclerView.setAdapter(adapter);
     }

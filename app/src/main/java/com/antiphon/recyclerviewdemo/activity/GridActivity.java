@@ -12,7 +12,6 @@ import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
@@ -22,7 +21,7 @@ public class GridActivity extends AppCompatActivity implements View.OnClickListe
 
     private RecyclerView mRecyclerView;
     private List<String> mStringList;
-    private LinearLayoutManager mManager;
+    private GridLayoutManager mManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
