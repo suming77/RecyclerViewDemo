@@ -44,9 +44,9 @@ public class ItemDecorationAnimatorActivity extends AppCompatActivity implements
         //设置分割线
         mDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         mDrawable = ContextCompat.getDrawable(this, R.drawable.divider_item_decoration);
-        if (mDrawable != null) {
+//        if (mDrawable != null) {
 //            mDecoration.setDrawable(mDrawable);
-        }
+//        }
         mRecyclerView.addItemDecoration(mDecoration);
 //        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 

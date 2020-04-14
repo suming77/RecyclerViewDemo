@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * 自定义
+ * 自定义LayoutManager
  */
 public class MyLayoutManagerActivity extends AppCompatActivity {
     @Override
