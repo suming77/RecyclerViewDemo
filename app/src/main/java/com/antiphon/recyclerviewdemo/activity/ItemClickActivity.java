@@ -29,6 +29,7 @@ public class ItemClickActivity extends AppCompatActivity implements OnItemClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerview);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        //分支创建
 
         List<Goods> goodsList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
