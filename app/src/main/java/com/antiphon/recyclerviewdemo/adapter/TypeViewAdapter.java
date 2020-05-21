@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.antiphon.recyclerviewdemo.R;
+import com.antiphon.recyclerviewdemo.model.Goods;
 
 import java.util.List;
 
@@ -23,21 +24,19 @@ import androidx.recyclerview.widget.RecyclerView;
  */
 public class TypeViewAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private List<String> mData;
-    private static final int ITEM_TYPE_NORMAL = 0;//普通类型
-    private static final int ITEM_TYPE_SECTION = 1;//特殊类型
+    private List<Goods> mData;
+    public static final int ITEM_TYPE_NORMAL = 0;//普通类型
+    public static final int ITEM_TYPE_SECTION = 1;//特殊类型
 
-    public TypeViewAdapter(Context context, List<String> stringList) {
+    public TypeViewAdapter(Context context, List<Goods> stringList) {
         this.mContext = context;
         this.mData = stringList;
     }
 
     @Override
     public int getItemViewType(int position) {
-        if (position % 4 == 0) {//能被4整除的item为特殊类型
-            return ITEM_TYPE_SECTION;
-        }
-        return ITEM_TYPE_NORMAL;//普通类型
+        Goods goods = mData.get(position);
+        return goods.getViewType();
     }
 
     @NonNull
@@ -56,7 +55,7 @@ public class TypeViewAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof NormalHolder) {//普通类型ViewHolder
             NormalHolder viewHolder = (NormalHolder) holder;
-            viewHolder.mTv_name.setText(mData.get(position));
+            viewHolder.mTv_name.setText(mData.get(position).getName());
             viewHolder.mTv_price.setText("$：" + position * 100);
             viewHolder.mCl_root.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -1,9 +1,13 @@
-package com.antiphon.recyclerviewdemo;
+package com.antiphon.recyclerviewdemo.model;
 
 public class Goods {
     private String name;
     private long price;
     private String des;
+    private int viewType;
+
+    public Goods() {
+    }
 
     public Goods(String name, long price, String des) {
         this.name = name;
@@ -33,5 +37,13 @@ public class Goods {
 
     public void setDes(String des) {
         this.des = des;
+    }
+
+    public int getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
     }
 }

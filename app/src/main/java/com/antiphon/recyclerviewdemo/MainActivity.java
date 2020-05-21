@@ -11,6 +11,7 @@ import com.antiphon.recyclerviewdemo.activity.ItemDecorationAnimatorActivity;
 import com.antiphon.recyclerviewdemo.activity.LinearHorizontalActivity;
 import com.antiphon.recyclerviewdemo.activity.LinearVerticalActivity;
 import com.antiphon.recyclerviewdemo.activity.MyLayoutManagerActivity;
+import com.antiphon.recyclerviewdemo.activity.NestedScrollActivity;
 import com.antiphon.recyclerviewdemo.activity.StaggeredGridActivity;
 import com.antiphon.recyclerviewdemo.activity.TouchHelperActivity;
 import com.antiphon.recyclerviewdemo.activity.TypeViewActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_touchHelper).setOnClickListener(this);
         findViewById(R.id.btn_item_click).setOnClickListener(this);
         findViewById(R.id.btn_my_layoutmanager).setOnClickListener(this);
+        findViewById(R.id.btn_nest_scroll).setOnClickListener(this);
     }
 
     @Override
@@ -71,8 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_item_click://item点击事件
                 cls = ItemClickActivity.class;
                 break;
-                case R.id.btn_my_layoutmanager://自定义layoutmanager
+            case R.id.btn_my_layoutmanager://自定义layoutmanager
                 cls = MyLayoutManagerActivity.class;
+                break;
+            case R.id.btn_nest_scroll://嵌套滑动
+                cls = NestedScrollActivity.class;
                 break;
         }
 

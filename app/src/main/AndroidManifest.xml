@@ -46,6 +46,15 @@
         <activity
             android:name=".activity.MyLayoutManagerActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NestedScrollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DependencyViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScrollViewActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

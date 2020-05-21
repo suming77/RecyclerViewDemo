@@ -1,4 +1,4 @@
-package com.antiphon.recyclerviewdemo;
+package com.antiphon.recyclerviewdemo.weight;
 
 import android.graphics.Color;
 

@@ -2,7 +2,7 @@ package com.antiphon.recyclerviewdemo.activity;
 
 import android.os.Bundle;
 
-import com.antiphon.recyclerviewdemo.MyItemTouchCallback;
+import com.antiphon.recyclerviewdemo.weight.MyItemTouchCallback;
 import com.antiphon.recyclerviewdemo.R;
 import com.antiphon.recyclerviewdemo.adapter.LinearVerticalAdapter;
 

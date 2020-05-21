@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.antiphon.recyclerviewdemo.R;
 import com.antiphon.recyclerviewdemo.adapter.TypeViewAdapter;
+import com.antiphon.recyclerviewdemo.model.Goods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,12 +33,16 @@ public class TypeViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(manager);
 
         //3.设置数据
-        List<String> stringList = new ArrayList<>();
+        List<Goods> stringList = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
-            stringList.add("球队名称： " + i);
+            Goods goods = new Goods();
+            goods.setName("球队名称： " + i);
+            //每第四个数据为广告类型，其他为普通类型
+            goods.setViewType(i % 4 == 0 ? TypeViewAdapter.ITEM_TYPE_SECTION : TypeViewAdapter.ITEM_TYPE_NORMAL);
+            stringList.add(goods);
         }
 
-        //4.数据适配器n
+        //4.数据适配器
         TypeViewAdapter adapter = new TypeViewAdapter(this, stringList);
         //设置适配器到recyclerView
         recyclerView.setAdapter(adapter);

@@ -4,11 +4,11 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import com.antiphon.recyclerviewdemo.Goods;
 import com.antiphon.recyclerviewdemo.Interface.OnItemChildClickListener;
 import com.antiphon.recyclerviewdemo.R;
 import com.antiphon.recyclerviewdemo.base.BaseListAdapter;
 import com.antiphon.recyclerviewdemo.base.BaseViewHolder;
+import com.antiphon.recyclerviewdemo.model.Goods;
 
 import java.util.List;
 
@@ -52,4 +52,7 @@ public class ItemClickAdapter extends BaseListAdapter<Goods> {
     public void setOnItemChildClickListener(OnItemChildClickListener onItemChildClickListener) {
         mOnItemChildClickListener = onItemChildClickListener;
     }
+
+
+
 }
