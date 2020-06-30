@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.antiphon.recyclerviewdemo.Goods;
 import com.antiphon.recyclerviewdemo.Interface.OnItemChildClickListener;
 import com.antiphon.recyclerviewdemo.Interface.OnItemClickListener;
 import com.antiphon.recyclerviewdemo.R;
 import com.antiphon.recyclerviewdemo.adapter.ItemClickAdapter;
+import com.antiphon.recyclerviewdemo.model.Goods;
 
 import java.util.ArrayList;
 import java.util.List;
